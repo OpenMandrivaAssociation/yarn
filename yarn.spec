@@ -7,14 +7,15 @@
 # don't require bundled modules
 %global __requires_exclude_from ^(%{nodejs_sitelib}/yarn/lib/.*|%{nodejs_sitelib}/yarn/bin/yarn(|\\.cmd|\\.ps1|pkg.*))$
 
-%global bundledate 20240122
+%global bundledate 20240805
 
 Name:           yarn
-Version:        1.22.21
+Version:        1.22.22
 Release:        1
 Summary:        Fast, reliable, and secure dependency management.
 URL:            https://github.com/yarnpkg/yarn
 # we need tarball with node_modules
+# Generate with ./yarnpkg-tarball.sh
 Source0:        yarnpkg-v%{version}-bundled-%{bundledate}.tar.gz
 Source1:        yarnpkg-tarball.sh
 License:        BSD
